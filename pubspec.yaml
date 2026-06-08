@@ -57,6 +57,7 @@ dependencies:
   fl_chart: ^1.2.0
   slider_button: ^3.1.0
   flutter_native_splash: ^2.4.7
+  dio: ^5.9.2
 
 flutter_launcher_icons:
   image_path: "assets/icons/masterclass_icon_white.png"
