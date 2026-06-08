@@ -1,37 +1,38 @@
 # 📱 MasterClass - Mobile Client
 
-## 📝 Présentation du Projet
-Ce dépôt contient le code source de l'application mobile de la plateforme **MasterClass**, un écosystème d'apprentissage du développement logiciel. L'application est conçue pour offrir une expérience utilisateur fluide, interactive et accessible même dans des conditions réseau instables.
+## 📝 Project Overview
+This repository contains the source code for the mobile application of the **MasterClass** platform, an ecosystem for learning software development. The application is designed to offer a fluid, interactive, and accessible user experience, even under unstable network conditions.
 
-### 🌟 Fonctionnalités Clés
-- **Classroom & Offline Mode :** Consultation du catalogue de cours et lecture vidéo avec mise en cache locale automatique pour l'accès hors-ligne.
-- **Interactive Assessments :** Moteur de quiz et playground d'écriture de code avec coloration syntaxique intégrée.
-- **AI Tutor Chat :** Canal de communication temps réel (WebSockets) avec un tuteur virtuel intelligent pour la remédiation des lacunes.
-- **Gamification & Affiliation :** Système de badges de compétences et gestion d'un portefeuille virtuel de parrainage.
-
----
-
-## 🛠️ Stack Technique & Outils
-- **Framework Principal :** Flutter 3.x & Dart
-- **Gestion d'État (State Management) :** Bloc / Riverpod (Architecture découplée)
-- **Navigation :** GoRouter
-- **Persistance Locale (Offline Cache) :** Hive / Isar Database
-- **Sécurité :** Flutter Secure Storage (Stockage chiffré des tokens JWT)
+### 🌟 Key Features
+- **Classroom & Offline Mode:** Browse the course catalog and play videos with automatic local caching for offline access.
+- **Interactive Assessments:** Quiz engine and code-writing playground with integrated syntax highlighting.
+- **AI Tutor Chat:** Real-time communication channel (WebSockets) with an intelligent virtual tutor to address learning gaps.
+- **Gamification & Affiliation:** Skill badges system and management of a virtual referral wallet.
 
 ---
 
-## 📂 Architecture des Dossiers
-Le projet adopte une approche **Feature-First** combinée aux principes de la *Clean Architecture* :
+## 🛠️ Tech Stack & Tools
+- **Main Framework:** Flutter 3.x & Dart
+- **State Management:** Bloc / Riverpod (Decoupled architecture)
+- **Navigation:** GoRouter
+- **Local Persistence (Offline Cache):** Hive / Isar Database
+- **Security:** Flutter Secure Storage (Encrypted storage for JWT tokens)
+
+---
+
+## 📂 Folder Architecture
+The project follows a **Feature-First** approach combined with *Clean Architecture* principles:
 
 ```text
 lib/
-├── core/                         # Composants globaux et partagés
-│   ├── constants/                # Thèmes, couleurs (AppColors), dimensions
-│   ├── error/                    # Gestion centralisée des exceptions
-│   ├── routes/                   # Configuration des routes de navigation
-│   └── services/                 # Services partagés (WebSocket, NetworkInfo)
-└── features/                     # Modules métiers isolés
-    ├── auth/                     # Authentification & Session (JWT)
-    ├── classroom/                # Gestion des cours & visionnage
-    ├── assessment/               # Quiz et défis de code
-    └── ai_tutor/                 # Interface du Chatbot IA
+├── core/                         # Global and shared components
+│   ├── constants/                # Themes, colors (AppColors), dimensions
+│   ├── error/                    # Centralized exception handling
+│   ├── routes/                   # Navigation routes configuration
+│   └── services/                 # Shared services (WebSocket, NetworkInfo)
+└── features/                     # Isolated business modules
+    ├── auth/                     # Authentication & Session (JWT)
+    ├── classroom/                # Course management & viewing
+    ├── assessment/               # Quizzes and code challenges
+    └── ai_tutor/                 # AI Chatbot interface
+```
