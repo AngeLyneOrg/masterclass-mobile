@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:masterclass/core/routes/app_router.dart';
 import 'package:masterclass/core/themes/app_theme.dart';
 import 'package:masterclass/core/themes/theme_controller.dart';
 
-void main() => runApp(const MyApp());
+void main() => runApp(
+  const ProviderScope(
+    child: MyApp(),
+  ),
+);
 
 class MyApp extends StatefulWidget {
   const MyApp({super.key});
@@ -17,9 +22,8 @@ class _MyAppState extends State<MyApp> {
 
   void _toggleTheme() {
     setState(() {
-      _themeMode = _themeMode == ThemeMode.light
-          ? ThemeMode.dark
-          : ThemeMode.light;
+      _themeMode =
+      _themeMode == ThemeMode.light ? ThemeMode.dark : ThemeMode.light;
     });
   }
 
