@@ -32,7 +32,7 @@ class _SplashScreenState extends State<SplashScreen>
       ..addStatusListener((status) {
         // 3. Quand l'animation est terminée (AnimationStatus.completed), on change de page
         if (status == AnimationStatus.completed) {
-          context.goNamed('home');
+          context.go('home');
         }
       });
 
